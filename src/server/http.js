@@ -13,10 +13,11 @@ axios.interceptors.request.use(function (config) {
   let apiLockIndex = config.url.replace(config.baseURL, '');
   if (apiLock[apiLockIndex] && apiLock[apiLockIndex] == true && config.canBatch !== true) return Promise.reject('end');
   apiLock[apiLockIndex] = true;
-
     //设置请求头
-    config.headers['Authorization'] = 'bearer 95d4363e-18c2-4c32-a5f4-de743c572596';
-    config.headers['Content-Type'] = 'application/json;charset=UTF-8';
+    config.headers = {
+        'Authorization':'bearer 7789e961-df8f-42b9-b8e6-818245c51e3f',
+        'Content-Type':'application/json;charset=UTF-8'
+    }
 
     return config;
 }, function (error) {
