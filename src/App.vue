@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    vue3
-    
+    <router-view></router-view> 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  data(){
+    return{
+    }
+  },
   mounted(){
     let params = {
         resourceType: "M"
@@ -21,9 +23,9 @@ export default {
     //   }).then(res => {                   
     //   console.log(11,res);   
     // })
-    this.axios.post(this.$api.getUserResource, params).then((res)=> {
-      console.log(11,res);   
-    })
+    // this.axios.post(this.$api.getUserResource, params).then((res)=> {
+    //   console.log(11,res);   
+    // })
   },
 }
 </script>
@@ -35,6 +37,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

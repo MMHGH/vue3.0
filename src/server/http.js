@@ -16,7 +16,7 @@ axios.interceptors.request.use(function (config) {
     //设置请求头
     config.headers = {
         'Authorization':'bearer 7789e961-df8f-42b9-b8e6-818245c51e3f',
-        'Content-Type':'application/json;charset=UTF-8'
+        'Content-Type':'application/json;charset=UTF-8' //401：token过期
     }
 
     return config;
